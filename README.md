@@ -48,9 +48,9 @@
 <table>
     <tr>
         <td  align="center" valign="middle" width="50">
-          <a href="https://ethpanda.org/" target="_blank">
+          <a href="./materials/images/ETHPanda.png" target="_blank">
                 <img src="./materials/images/ETHPanda.png" alt="Rockey" width="130" />
-            </a>
+          </a>
             Rockey
         </td>
         <td  align="center" valign="middle">
@@ -62,7 +62,7 @@
     </tr>
     <tr>
         <td  align="center" valign="middle" width="50">
-          <a href="https://ethpanda.org/" target="_blank">
+          <a href="./materials/images/keylen.jpg" target="_blank">
                 <img src="./materials/images/keylen.jpg" alt="Keylen" width="130" />
           </a>
             Keylen
