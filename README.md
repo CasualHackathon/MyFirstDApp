@@ -68,6 +68,38 @@
 
 获奖 Badge 可在进行 [LXDAO Onboarding](https://lxdao.io/onboarding/intro) 后的 Profile 内查看
 
+### **🧑‍⚖️ Demo Day评委**
+<table>
+    <tr>
+        <td  align="center" valign="middle" width="50">
+          <a href="https://ethpanda.org/" target="_blank">
+                <img src="./materials/images/ETHPanda.png" alt="Rockey" width="130" />
+            </a>
+            Rockey
+        </td>
+        <td  align="center" valign="middle">
+          <a href="https://x.com/rockeyshao" rel="nofollow">@rockeyshao</a>
+        </td>
+        <td  align="center" valign="middle">
+          Founder of invitenow.xyz, Prev. @NetEase, @OKX
+        </td>
+    </tr>
+    <tr>
+        <td  align="center" valign="middle" width="50">
+          <a href="https://ethpanda.org/" target="_blank">
+                <img src="./materials/images/keylen.jpg" alt="Keylen" width="130" />
+          </a>
+            Keylen
+        </td>
+        <td  align="center" valign="middle">
+          <a href="https://x.com/Keylen3_14" rel="nofollow">@Keylen3_14</a>
+        </td>
+        <td  align="center" valign="middle">
+          LXDAO
+        </td>
+    </tr>
+  
+</table>
 
 
 ### 📝 报名列表
