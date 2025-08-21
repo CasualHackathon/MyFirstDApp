@@ -48,8 +48,8 @@
 <table>
     <tr>
         <td  align="center" valign="middle" width="50">
-          <a href="./materials/images/ETHPanda.png" target="_blank">
-                <img src="./materials/images/ETHPanda.png" alt="Rockey" width="130" />
+          <a href="./materials/images/Rockey.jpg" target="_blank">
+                <img src="./materials/images/Rockey.jpg" alt="Rockey" width="130" />
           </a>
             Rockey
         </td>
@@ -57,7 +57,7 @@
           <a href="https://x.com/rockeyshao" rel="nofollow">@rockeyshao</a>
         </td>
         <td  align="center" valign="middle">
-          Founder of invitenow.xyz, Prev. @NetEase, @OKX
+          Founder of invitenow.xzy
         </td>
     </tr>
     <tr>
@@ -71,7 +71,21 @@
           <a href="https://x.com/Keylen3_14" rel="nofollow">@Keylen3_14</a>
         </td>
         <td  align="center" valign="middle">
-          LXDAO
+          FrontEnd UI/UX Design FullStack Solidity FullStack
+        </td>
+    </tr>
+    <tr>
+        <td  align="center" valign="middle" width="50">
+          <a href="./materials/images/cooper.jpg" target="_blank">
+                <img src="./materials/images/cooper.jpg" alt="Keylen" width="130" />
+          </a>
+            Cooper
+        </td>
+        <td  align="center" valign="middle">
+          <a href="https://x.com/icooperhero" rel="nofollow">@icooperhero</a>
+        </td>
+        <td  align="center" valign="middle">
+          区块链开发工程师， LXDAO Builder
         </td>
     </tr>
   
