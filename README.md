@@ -44,30 +44,6 @@
 - 项目将按照提交顺序进行展示
 - Zoom 链接见 Github 对应处，也会同步预告至参赛选手群内
 
-### **🏆 3. 奖项与奖品**
-
-- 人人有奖：所有提交的项目都将获得定制纪念 NFT 勋章
-- 奖项类别示例：
-    - 最具创意项目
-    - 最佳集成
-    - 最实用应用
-    - 技术卓越奖
-    - 奖品详情：
-        - BGA USDT 空投：
-            - 项目必须开源
-            - 提供现场演示
-            - 分享项目展示帖子，包含团队与 BGA 标志的合照，在社交媒体上 @ChainforGood
-
-**黑客松赛后 Feedback**
-
-- Demo show 后会发送一份关于本期休闲黑客松的 Feedback Tally，诚邀所有参与本期黑客松的相关者填写。您的反馈，能帮我们把休闲黑客松运营得越来越好！
-
-**获奖 badge 查看**
-
- <img src="./materials/images/badge.png" />
-
-获奖 Badge 可在进行 [LXDAO Onboarding](https://lxdao.io/onboarding/intro) 后的 Profile 内查看
-
 ### **🧑‍⚖️ Demo Day评委**
 <table>
     <tr>
@@ -273,8 +249,29 @@
 
 **🚀 这个夏天，不卷商业计划，只玩创意，借助 AI 工具 ，开启你的 DApp 初体验吧！**
 
-**奖项与奖品**
+### **07 | 奖项与奖品**
 
+- 人人有奖：所有提交的项目都将获得定制纪念 NFT 勋章
+- 奖项类别示例：
+    - 最具创意项目
+    - 最佳集成
+    - 最实用应用
+    - 技术卓越奖
+    - 奖品详情：
+        - BGA USDT 空投：
+            - 项目必须开源
+            - 提供现场演示
+            - 分享项目展示帖子，包含团队与 BGA 标志的合照，在社交媒体上 @ChainforGood
+
+**黑客松赛后 Feedback**
+
+- Demo show 后会发送一份关于本期休闲黑客松的 Feedback Tally，诚邀所有参与本期黑客松的相关者填写。您的反馈，能帮我们把休闲黑客松运营得越来越好！
+
+**获奖 badge 查看**
+
+ <img src="./materials/images/badge.png" />
+
+获奖 Badge 可在进行 [LXDAO Onboarding](https://lxdao.io/onboarding/intro) 后的 Profile 内查看
 
 ## 🤝 联合组织
 
