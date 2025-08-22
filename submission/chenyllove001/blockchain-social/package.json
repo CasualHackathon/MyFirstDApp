@@ -1,0 +1,30 @@
+{
+  "name": "blockchain-social",
+  "version": "1.0.0",
+  "description": "区块链社交应用",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vue",
+    "blockchain",
+    "social"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-plus": "^2.4.2",
+    "ethers": "^5.7.2",
+    "ipfs-http-client": "^56.0.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  }
+}
