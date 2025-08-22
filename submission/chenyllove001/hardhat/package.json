@@ -1,0 +1,24 @@
+{
+  "name": "myfirstdapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@chainlink/contracts": "^1.4.0",
+    "@chainlink/env-enc": "^1.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^6.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.14",
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^17.2.0",
+    "hardhat": "^2.25.0",
+    "hardhat-deploy": "^1.0.4"
+  },
+  "dependencies": {
+    "@remixproject/plugin-vscode": "^0.3.38"
+  }
+}
