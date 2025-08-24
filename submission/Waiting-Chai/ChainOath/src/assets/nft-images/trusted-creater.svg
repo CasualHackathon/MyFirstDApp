@@ -1,0 +1,96 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bronzeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CD7F32;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="starGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4A460;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#CD7F32;stop-opacity:0.3" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="4" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 主星星 -->
+  <polygon points="200,40 220,120 300,120 240,170 260,250 200,210 140,250 160,170 100,120 180,120" 
+           fill="url(#bronzeGradient)" filter="url(#shadow)" stroke="#8B4513" stroke-width="3"/>
+  
+  <!-- 内部光晕星星 -->
+  <polygon points="200,60 215,125 270,125 225,160 240,225 200,195 160,225 175,160 130,125 185,125" 
+           fill="url(#starGlow)" opacity="0.7"/>
+  
+  <!-- 中心圆形区域 -->
+  <circle cx="200" cy="170" r="50" fill="#DEB887" stroke="#CD853F" stroke-width="2" opacity="0.9"/>
+  <circle cx="200" cy="170" r="40" fill="#F5DEB3" opacity="0.6"/>
+  
+  <!-- 点赞图标 -->
+  <g transform="translate(200,170)">
+    <!-- 拇指向上 -->
+    <path d="M-8,-15 Q-12,-20 -8,-25 Q-4,-28 0,-25 Q4,-22 8,-20 L8,-5 Q8,0 4,5 L-8,5 Q-12,0 -8,-15 Z" 
+          fill="#4169E1" stroke="#191970" stroke-width="2"/>
+    
+    <!-- 手掌 -->
+    <rect x="-8" y="5" width="16" height="15" rx="3" fill="#4169E1" stroke="#191970" stroke-width="2"/>
+    
+    <!-- 高光 -->
+    <ellipse cx="-2" cy="-8" rx="3" ry="6" fill="#6495ED" opacity="0.8"/>
+  </g>
+  
+  <!-- 社区元素 - 人物图标 -->
+  <g fill="#FF6347" opacity="0.8">
+    <!-- 左上人物 -->
+    <g transform="translate(120,100)">
+      <circle cx="0" cy="0" r="8" fill="#FF6347"/>
+      <path d="M-6,8 Q0,12 6,8 L6,20 L-6,20 Z" fill="#FF6347"/>
+    </g>
+    
+    <!-- 右上人物 -->
+    <g transform="translate(280,100)">
+      <circle cx="0" cy="0" r="8" fill="#FF6347"/>
+      <path d="M-6,8 Q0,12 6,8 L6,20 L-6,20 Z" fill="#FF6347"/>
+    </g>
+    
+    <!-- 左下人物 -->
+    <g transform="translate(120,240)">
+      <circle cx="0" cy="0" r="8" fill="#FF6347"/>
+      <path d="M-6,8 Q0,12 6,8 L6,20 L-6,20 Z" fill="#FF6347"/>
+    </g>
+    
+    <!-- 右下人物 -->
+    <g transform="translate(280,240)">
+      <circle cx="0" cy="0" r="8" fill="#FF6347"/>
+      <path d="M-6,8 Q0,12 6,8 L6,20 L-6,20 Z" fill="#FF6347"/>
+    </g>
+  </g>
+  
+  <!-- 连接线表示社区网络 -->
+  <g stroke="#FF7F50" stroke-width="2" opacity="0.5" fill="none">
+    <line x1="120" y1="100" x2="200" y2="170"/>
+    <line x1="280" y1="100" x2="200" y2="170"/>
+    <line x1="120" y1="240" x2="200" y2="170"/>
+    <line x1="280" y1="240" x2="200" y2="170"/>
+  </g>
+  
+  <!-- 装饰小星星 -->
+  <g fill="#FFD700" opacity="0.7">
+    <polygon points="80,80 82,88 90,88 84,93 86,101 80,97 74,101 76,93 70,88 78,88" transform="rotate(15 80 80)"/>
+    <polygon points="320,80 322,88 330,88 324,93 326,101 320,97 314,101 316,93 310,88 318,88" transform="rotate(-15 320 80)"/>
+    <polygon points="80,280 82,288 90,288 84,293 86,301 80,297 74,301 76,293 70,288 78,288" transform="rotate(-30 80 280)"/>
+    <polygon points="320,280 322,288 330,288 324,293 326,301 320,297 314,301 316,293 310,288 318,288" transform="rotate(30 320 280)"/>
+  </g>
+  
+  <!-- 文字 -->
+  <text x="200" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#8B4513">
+    TRUSTED CREATER
+  </text>
+  <text x="200" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#A0522D">
+    Community Recognition
+  </text>
+  
+  <!-- 外圈装饰 -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#D2691E" stroke-width="2" stroke-dasharray="12,6" opacity="0.6"/>
+</svg>
