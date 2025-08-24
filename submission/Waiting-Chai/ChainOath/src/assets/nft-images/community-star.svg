@@ -1,0 +1,113 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="platinumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F8FF;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#E6E6FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D3D3D3;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A9A9A9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="crownGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#E6E6FA;stop-opacity:0.4" />
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.3" />
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="3" stdDeviation="8" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- 皇冠基座 -->
+  <ellipse cx="200" cy="280" rx="120" ry="20" fill="url(#platinumGradient)" filter="url(#shadow)" stroke="#A9A9A9" stroke-width="2"/>
+  
+  <!-- 皇冠主体 -->
+  <path d="M80,280 L100,180 L140,200 L160,140 L200,160 L240,140 L260,200 L300,180 L320,280 Z" 
+        fill="url(#platinumGradient)" filter="url(#shadow)" stroke="#A9A9A9" stroke-width="3"/>
+  
+  <!-- 皇冠内部光晕 -->
+  <path d="M90,270 L105,190 L135,205 L155,155 L200,170 L245,155 L265,205 L295,190 L310,270 Z" 
+        fill="url(#crownGlow)" opacity="0.7"/>
+  
+  <!-- 中央大星星 -->
+  <g transform="translate(200,200)">
+    <polygon points="0,-40 12,-12 40,-12 20,8 32,36 0,20 -32,36 -20,8 -40,-12 -12,-12" 
+             fill="url(#starGlow)" filter="url(#shadow)" stroke="#DAA520" stroke-width="2"/>
+    <polygon points="0,-30 9,-9 30,-9 15,6 24,27 0,15 -24,27 -15,6 -30,-9 -9,-9" 
+             fill="#FFFF00" opacity="0.8"/>
+  </g>
+  
+  <!-- 左侧小星星 -->
+  <g transform="translate(160,170)">
+    <polygon points="0,-20 6,-6 20,-6 10,4 16,18 0,10 -16,18 -10,4 -20,-6 -6,-6" 
+             fill="url(#starGlow)" stroke="#DAA520" stroke-width="1"/>
+  </g>
+  
+  <!-- 右侧小星星 -->
+  <g transform="translate(240,170)">
+    <polygon points="0,-20 6,-6 20,-6 10,4 16,18 0,10 -16,18 -10,4 -20,-6 -6,-6" 
+             fill="url(#starGlow)" stroke="#DAA520" stroke-width="1"/>
+  </g>
+  
+  <!-- 社交网络元素 -->
+  <g fill="#4169E1" opacity="0.8">
+    <!-- 网络节点 -->
+    <circle cx="120" cy="120" r="8" fill="#4169E1"/>
+    <circle cx="280" cy="120" r="8" fill="#4169E1"/>
+    <circle cx="80" cy="200" r="6" fill="#6495ED"/>
+    <circle cx="320" cy="200" r="6" fill="#6495ED"/>
+    <circle cx="100" cy="300" r="6" fill="#87CEEB"/>
+    <circle cx="300" cy="300" r="6" fill="#87CEEB"/>
+    
+    <!-- 连接线 -->
+    <g stroke="#4169E1" stroke-width="2" opacity="0.6" fill="none">
+      <line x1="120" y1="120" x2="200" y2="200"/>
+      <line x1="280" y1="120" x2="200" y2="200"/>
+      <line x1="80" y1="200" x2="200" y2="200"/>
+      <line x1="320" y1="200" x2="200" y2="200"/>
+      <line x1="100" y1="300" x2="200" y2="200"/>
+      <line x1="300" y1="300" x2="200" y2="200"/>
+    </g>
+  </g>
+  
+  <!-- 皇冠装饰宝石 -->
+  <g>
+    <!-- 左侧宝石 -->
+    <ellipse cx="140" cy="200" rx="8" ry="12" fill="#FF1493" stroke="#DC143C" stroke-width="1"/>
+    <ellipse cx="140" cy="195" rx="4" ry="6" fill="#FF69B4" opacity="0.8"/>
+    
+    <!-- 右侧宝石 -->
+    <ellipse cx="260" cy="200" rx="8" ry="12" fill="#00CED1" stroke="#008B8B" stroke-width="1"/>
+    <ellipse cx="260" cy="195" rx="4" ry="6" fill="#40E0D0" opacity="0.8"/>
+    
+    <!-- 中央顶部宝石 -->
+    <ellipse cx="200" cy="140" rx="10" ry="15" fill="#9370DB" stroke="#663399" stroke-width="1"/>
+    <ellipse cx="200" cy="135" rx="5" ry="8" fill="#BA55D3" opacity="0.8"/>
+  </g>
+  
+  <!-- 光芒效果 -->
+  <g stroke="#FFD700" stroke-width="2" opacity="0.6" fill="none">
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(0 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(45 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(90 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(135 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(180 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(225 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(270 200 200)"/>
+    <line x1="200" y1="80" x2="200" y2="100" transform="rotate(315 200 200)"/>
+  </g>
+  
+  <!-- 文字 -->
+  <text x="200" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2F4F4F">
+    COMMUNITY STAR
+  </text>
+  <text x="200" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#696969">
+    High Engagement & Popularity
+  </text>
+  
+  <!-- 外圈装饰 -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="#E6E6FA" stroke-width="2" stroke-dasharray="15,5" opacity="0.7"/>
+</svg>
