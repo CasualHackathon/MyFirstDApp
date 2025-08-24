@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if ! command -v forge >/dev/null 2>&1; then
+  echo "[提示] 未检测到 Foundry (forge)。请先安装 Foundry："
+  echo "      curl -L https://foundry.paradigm.xyz | bash"
+  echo "      foundryup"
+  echo "安装完成后重开终端再重试推送。"
+  exit 1
+fi
+
+echo "Contracts: running forge test before push"
+cd contracts || exit 1
+forge test -q || {
+  echo "Error: forge test failed. Push aborted.";
+  exit 1;
+}

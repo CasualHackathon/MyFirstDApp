@@ -1,0 +1,9 @@
+node_modules/
+  dist/
+  build/
+  out/
+  .next/
+  coverage/
+  *.lock
+  pnpm-lock.yaml
+  CHANGELOG.md

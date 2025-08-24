@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if ! command -v forge >/dev/null 2>&1; then
+  echo "[提示] 未检测到 Foundry (forge)。请先安装 Foundry："
+  echo "      curl -L https://foundry.paradigm.xyz | bash"
+  echo "      foundryup"
+  echo "安装完成后重开终端再重试提交。"
+  exit 1
+fi
+
+echo "Contracts: forge fmt --check"
+cd contracts || exit 1
+forge fmt --check || {
+  echo "Error: forge fmt --check failed. Please run 'forge fmt' in contracts and retry.";
+  exit 1;
+}
+
+echo "Contracts: running forge test (quick)"
+forge test -q || {
+  echo "Error: forge test failed. Please fix tests before committing.";
+  exit 1;
+}
