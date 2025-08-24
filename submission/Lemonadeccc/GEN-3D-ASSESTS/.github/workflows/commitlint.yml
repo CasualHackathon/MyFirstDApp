@@ -1,0 +1,17 @@
+name: commitlint
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate PR commits with commitlint
+        uses: wagoid/commitlint-github-action@v5
+        with:
+          configFile: commitlint.config.js

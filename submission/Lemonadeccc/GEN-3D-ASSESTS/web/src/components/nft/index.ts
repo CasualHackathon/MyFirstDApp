@@ -1,0 +1,1 @@
+export { TNFTPage } from './TNFTPage';
