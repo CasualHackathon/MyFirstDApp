@@ -1,0 +1,7 @@
+# Write tests for your smart contract in this directory
+
+# Example: YourContract.t.sol
+
+TaskToken.t.sol
+DisputeResolver.t.sol
+FixedPaymentTask.t.sol
