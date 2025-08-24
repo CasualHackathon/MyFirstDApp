@@ -1,0 +1,54 @@
+name: forge-tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    name: Contracts • forge build + test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Cache Foundry and libs
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.foundry
+            contracts/lib
+          key: ${{ runner.os }}-foundry-${{ hashFiles('contracts/foundry.toml') }}
+
+      - name: Check formatting
+        working-directory: contracts
+        run: forge fmt --check
+
+      - name: Build contracts
+        working-directory: contracts
+        run: forge build
+
+      - name: Run forge tests (with gas report)
+        working-directory: contracts
+        run: |
+          forge test -vvv --gas-report | tee gas-report.txt
+
+      - name: Upload gas report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gas-report
+          path: contracts/gas-report.txt
+
+      # 如果需要 RPC/私钥，可取消注释并在仓库 Secrets 配置 ETH_RPC_URL / PRIVATE_KEY
+      # env:
+      #   ETH_RPC_URL: ${{ secrets.ETH_RPC_URL }}
+      #   PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}

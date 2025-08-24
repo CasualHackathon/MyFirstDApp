@@ -1,0 +1,13 @@
+{
+  "contractAddress": "0xdbC43636FC0E13cDEc7B195c90B2E4070BbDDACa",
+  "deployer": "0x84B6863B6eAd8B3d03B0E6828A180B6346Ad7694",
+  "name": "3D Asset NFT",
+  "symbol": "3DNFT",
+  "baseURI": "https://api.3dnft.example.com/metadata/",
+  "blockNumber": 9003027,
+  "timestamp": 1755423072,
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deploymentDate": "2025-08-17",
+  "gasUsed": 6839722
+}

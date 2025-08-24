@@ -1,0 +1,41 @@
+{
+  "name": "gen-3d-assets",
+  "private": true,
+  "description": "AI-powered 3D Assets NFT Platform",
+  "scripts": {
+    "pre": "pnpm run pre:installAndBuild",
+    "pre:installAndBuild": "pnpm run pre:web && pnpm run pre:contracts && pnpm dev",
+    "pre:contracts": "cd contracts && (forge install || forge install foundry-rs/forge-std OpenZeppelin/openzeppelin-contracts OpenZeppelin/openzeppelin-contracts-upgradeable) && forge build && cd ..",
+    "pre:web": "pnpm install --ignore-scripts && pnpm run --filter web build && pnpm dev",
+    "prepare": "husky install",
+    "dev": "pnpm run --filter web dev",
+    "build": "pnpm run --recursive build",
+    "test": "pnpm run --recursive test",
+    "test:contracts": "cd contracts && forge test",
+    "build:contracts": "cd contracts && forge build",
+    "commit": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "lint": "pnpm run --recursive lint",
+    "format": "pnpm run --recursive format",
+    "check": "pnpm run --recursive check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@eslint/js": "^9.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-cli": "^4.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.33.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

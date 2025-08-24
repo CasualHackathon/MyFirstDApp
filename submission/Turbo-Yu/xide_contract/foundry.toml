@@ -1,0 +1,16 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.20" # 指定 Solidity 版本
+optimizer = true         # 启用编译优化
+
+# 默认私钥配置
+private_key = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+
+# 默认 RPC URL
+rpc_url = "127.0.0.1:8545"
+
+# 默认发送者地址
+sender = "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/chain.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chain Oath</title>
+  </head>
+  <body>
+    <script>
+      if (typeof global === 'undefined') {
+        var global = globalThis;
+      }
+      // Buffer polyfill
+      if (typeof Buffer === 'undefined') {
+        window.Buffer = {
+          from: function(data, encoding) {
+            if (typeof data === 'string') {
+              const encoder = new TextEncoder();
+              return encoder.encode(data);
+            }
+            return new Uint8Array(data);
+          },
+          alloc: function(size) {
+            return new Uint8Array(size);
+          },
+          isBuffer: function(obj) {
+            return obj instanceof Uint8Array;
+          }
+        };
+        global.Buffer = window.Buffer;
+      }
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
