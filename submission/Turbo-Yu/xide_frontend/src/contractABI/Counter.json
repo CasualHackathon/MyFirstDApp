@@ -1,0 +1,131 @@
+{
+  "abi": [
+    {
+      "type": "function",
+      "name": "count",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "decrement",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "increment",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "number",
+      "inputs": [],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "setNumber",
+      "inputs": [
+        { "name": "newNumber", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561000f575f80fd5b5061014b8061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610055575f3560e01c806306661abd146100595780632baeceb71461006e5780633fb5c1cb146100785780638381f58a1461008a578063d09de08a14610092575b5f80fd5b5f545b60405190815260200160405180910390f35b61007661009a565b005b6100766100863660046100bd565b5f55565b61005c5f5481565b6100766100af565b5f805490806100a8836100e8565b9190505550565b5f805490806100a8836100fd565b5f602082840312156100cd575f80fd5b5035919050565b634e487b7160e01b5f52601160045260245ffd5b5f816100f6576100f66100d4565b505f190190565b5f6001820161010e5761010e6100d4565b506001019056fea2646970667358221220e94fb9f8ba1d5c415cc0ad39ff65220fa37dfe0176d24d4a205fa09c95f931e464736f6c63430008140033",
+    "sourceMap": "65:334:16:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561000f575f80fd5b5060043610610055575f3560e01c806306661abd146100595780632baeceb71461006e5780633fb5c1cb146100785780638381f58a1461008a578063d09de08a14610092575b5f80fd5b5f545b60405190815260200160405180910390f35b61007661009a565b005b6100766100863660046100bd565b5f55565b61005c5f5481565b6100766100af565b5f805490806100a8836100e8565b9190505550565b5f805490806100a8836100fd565b5f602082840312156100cd575f80fd5b5035919050565b634e487b7160e01b5f52601160045260245ffd5b5f816100f6576100f66100d4565b505f190190565b5f6001820161010e5761010e6100d4565b506001019056fea2646970667358221220e94fb9f8ba1d5c415cc0ad39ff65220fa37dfe0176d24d4a205fa09c95f931e464736f6c63430008140033",
+    "sourceMap": "65:334:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;320:77;358:7;384:6;320:77;;;160:25:17;;;148:2;133:18;320:77:16;;;;;;;261:53;;;:::i;:::-;;116:80;;;;;;:::i;:::-;171:6;:18;116:80;88:21;;;;;;202:53;;;:::i;261:::-;299:6;:8;;;:6;:8;;;:::i;:::-;;;;;;261:53::o;202:::-;240:6;:8;;;:6;:8;;;:::i;196:180:17:-;255:6;308:2;296:9;287:7;283:23;279:32;276:52;;;324:1;321;314:12;276:52;-1:-1:-1;347:23:17;;196:180;-1:-1:-1;196:180:17:o;381:127::-;442:10;437:3;433:20;430:1;423:31;473:4;470:1;463:15;497:4;494:1;487:15;513:136;552:3;580:5;570:39;;589:18;;:::i;:::-;-1:-1:-1;;;625:18:17;;513:136::o;654:135::-;693:3;714:17;;;711:43;;734:18;;:::i;:::-;-1:-1:-1;781:1:17;770:13;;654:135::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "count()": "06661abd",
+    "decrement()": "2baeceb7",
+    "increment()": "d09de08a",
+    "number()": "8381f58a",
+    "setNumber(uint256)": "3fb5c1cb"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"count\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decrement\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"number\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newNumber\",\"type\":\"uint256\"}],\"name\":\"setNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Counter.sol\":\"Counter\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/Counter.sol\":{\"keccak256\":\"0x3b947d254aa2f5c004223ccad4f7860e08a9284cff4c522ba8a6b681ff058c62\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://a8aa3003ee5bb6c30f80e22ad3805bac3b2f1cf2897d89946f02afff1e5ec056\",\"dweb:/ipfs/QmXUL6wiAobxFDeo43ipDZUW7JgP7yz8jn2YKhGs8qQgtq\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.20+commit.a1b79de6" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "count",
+          "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "decrement"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "increment"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "number",
+          "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "newNumber",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setNumber"
+        }
+      ],
+      "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+      "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+    },
+    "settings": {
+      "remappings": ["forge-std/=lib/forge-std/src/"],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": { "src/Counter.sol": "Counter" },
+      "evmVersion": "shanghai",
+      "libraries": {}
+    },
+    "sources": {
+      "src/Counter.sol": {
+        "keccak256": "0x3b947d254aa2f5c004223ccad4f7860e08a9284cff4c522ba8a6b681ff058c62",
+        "urls": [
+          "bzz-raw://a8aa3003ee5bb6c30f80e22ad3805bac3b2f1cf2897d89946f02afff1e5ec056",
+          "dweb:/ipfs/QmXUL6wiAobxFDeo43ipDZUW7JgP7yz8jn2YKhGs8qQgtq"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "id": 16
+}

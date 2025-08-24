@@ -1,0 +1,70 @@
+# 依赖目录
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 环境配置文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 数据库文件
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# 日志文件
+logs/
+*.log
+
+# 上传文件
+uploads/
+
+# 运行时文件
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 覆盖率目录
+coverage/
+.nyc_output
+
+# 依赖锁定文件
+package-lock.json
+yarn.lock
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 临时文件
+tmp/
+temp/
+
+# 构建输出
+dist/
+build/
+
+# 测试覆盖率
+.nyc_output/
+coverage/
+
+# 其他
+*.tgz
+*.tar.gz
