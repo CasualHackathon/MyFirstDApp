@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* Douban Book Style Variables */
+:root {
+  --douban-green: #42bd56;
+  --douban-light-green: #e6f4ea;
+  --douban-gray: #f7f7f7;
+  --douban-border: #eaeaea;
+  --douban-text: #222;
+}
+
+body {
+  background: var(--douban-gray);
+  color: var(--douban-text);
+}
+
+.db-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  border: 1px solid var(--douban-border);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.db-btn {
+  background: var(--douban-green);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.db-btn:hover {
+  background: #369e48;
+}
+
+.db-input, .db-textarea {
+  border: 1px solid var(--douban-border);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.db-input:focus, .db-textarea:focus {
+  outline: none;
+  border-color: var(--douban-green);
+}
+
+.db-divider {
+  border-bottom: 1px solid var(--douban-border);
+  margin: 1rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
