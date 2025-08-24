@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Lottery DApp Demo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0deg); opacity:1;}
+  100% { transform: translateY(500px) rotate(360deg); opacity:0;}
+}
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: confetti 1s linear forwards;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen relative">
+
+<div class="bg-white shadow-lg rounded-2xl p-10 w-full max-w-md text-center relative z-10">
+    <h2 class="text-2xl font-bold mb-6">🎲 抽奖 DApp Demo</h2>
+
+    <button id="connectWallet" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full mb-4">
+        连接钱包
+    </button>
+
+    <p id="networkStatus" class="text-sm text-red-500 mb-4"></p>
+
+    <div class="my-4">
+        <input type="number" id="ethAmount" placeholder="ETH 输入 (0.01 最少)"
+               class="border border-gray-300 rounded-full px-4 py-2 w-2/3 text-center mr-2">
+        <button id="enterLottery" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full">
+            参与抽奖
+        </button>
+    </div>
+
+    <button id="pickWinner" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full mb-6">
+        幸运转转转
+    </button>
+
+    <div class="text-left space-y-2">
+        <p id="status" class="font-medium">状态: 未连接</p>
+        <p id="players" class="font-medium">玩家: </p>
+        <p id="balance" class="font-medium">奖池余额: 0 ETH</p>
+        <!-- 显示获奖者 -->
+        <p id="winner" class="font-bold text-purple-600 mt-4"></p>
+    </div>
+</div>
+
+<script type="module">
+import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@6.9.0/dist/ethers.min.js";
+
+let provider, signer, contract, refreshInterval;
+
+const contractAddress = "0x05470664d241bc11188d07C2c4d24963696a1BEB";
+const contractNetworkId = 11155111; // Sepolia
+const contractABI = [
+    "function enter() payable",
+    "function getPlayers() view returns (address[])",
+    "function pickWinner()",
+    "function manager() view returns (address)",
+    "event WinnerPicked(address winner)"
+];
+
+function setStatus(msg) {
+    document.getElementById("status").innerText = "状态: " + msg;
+}
+
+async function updatePlayersAndBalance() {
+    if (!contract) return;
+    try {
+        const players = await contract.getPlayers();
+        document.getElementById("players").innerText = "玩家: " + (players.length ? players.join(", ") : "暂无玩家");
+        const balance = await provider.getBalance(contractAddress);
+        document.getElementById("balance").innerText = "奖池余额: " + ethers.formatEther(balance) + " ETH";
+    } catch(err) { console.error(err); }
+}
+
+function startAutoRefresh() {
+    if (refreshInterval) clearInterval(refreshInterval);
+    refreshInterval = setInterval(updatePlayersAndBalance, 5000);
+}
+
+function showConfetti() {
+    for (let i=0;i<50;i++){
+        const confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.left = Math.random() * window.innerWidth + "px";
+        confetti.style.top = "-10px";
+        confetti.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
+        confetti.style.width = confetti.style.height = 5 + Math.random()*10 + "px";
+        document.body.appendChild(confetti);
+        setTimeout(()=>confetti.remove(),2000);
+    }
+}
+
+// 网络提示，不阻止操作
+async function checkNetwork() {
+    const network = await provider.getNetwork();
+    if (network.chainId !== contractNetworkId) {
+        document.getElementById("networkStatus").innerText =
+            `当前钱包网络：${network.name}(${network.chainId})，合约部署网络为 Sepolia`;
+    } else {
+        document.getElementById("networkStatus").innerText = "";
+    }
+    return true;
+}
+
+// 连接钱包
+document.getElementById("connectWallet").onclick = async () => {
+    if (!window.ethereum) { alert("未检测到 MetaMask！"); setStatus("未检测到钱包"); return; }
+    try {
+        provider = new ethers.BrowserProvider(window.ethereum);
+        await provider.send("eth_requestAccounts", []);
+        signer = await provider.getSigner();
+        contract = new ethers.Contract(contractAddress, contractABI, signer);
+        const user = await signer.getAddress();
+        setStatus("钱包已连接: " + user);
+        await checkNetwork();
+        updatePlayersAndBalance();
+        startAutoRefresh();
+
+        contract.on("WinnerPicked", (winner) => {
+            document.getElementById("winner").innerText = "🏆 获奖者: " + winner;
+            showConfetti();
+            updatePlayersAndBalance();
+        });
+    } catch(err){ console.error(err); setStatus("连接钱包出错: " + err.message); }
+};
+
+// 参与抽奖
+document.getElementById("enterLottery").onclick = async () => {
+    if (!contract) { alert("请先连接钱包"); return; }
+    await checkNetwork();
+    const ethInput = parseFloat(document.getElementById("ethAmount").value);
+    if (!ethInput || ethInput < 0.01) { alert("最少 0.01 ETH"); return; }
+    try {
+        const tx = await contract.enter({ value: ethers.parseEther(ethInput.toString()) });
+        setStatus("交易发送中...");
+        await tx.wait();
+        setStatus("已参与抽奖！");
+        updatePlayersAndBalance();
+    } catch(err){ console.error(err); setStatus("出错: " + err.message); }
+};
+
+// 幸运转转转
+document.getElementById("pickWinner").onclick = async () => {
+    if (!contract) { alert("请先连接钱包"); return; }
+    await checkNetwork();
+    try {
+        const managerAddress = await contract.manager();
+        const currentAddress = await signer.getAddress();
+        if (currentAddress.toLowerCase() !== managerAddress.toLowerCase()) {
+            alert("只有管理员可以抽奖！");
+            return;
+        }
+        const tx = await contract.pickWinner();
+        setStatus("正在抽奖...");
+        await tx.wait();
+        setStatus("已选出获奖者！恭喜中奖🎉");
+        updatePlayersAndBalance();
+    } catch(err){ console.error(err); setStatus("出错: " + err.message); }
+};
+</script>
+</body>
+</html>
