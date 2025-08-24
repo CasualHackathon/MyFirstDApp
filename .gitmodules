@@ -1,0 +1,3 @@
+[submodule "submission/Aster-amellus"]
+	path = submission/Aster-amellus
+	url = git@github.com:Aster-amellus/CyberChimera.git
