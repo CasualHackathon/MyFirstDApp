@@ -1,0 +1,40 @@
+{
+  "name": "intensivesquad",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "account": "pnpm --filter @intensivesquad/foundry account",
+    "chain": "pnpm --filter @intensivesquad/foundry chain",
+    "compile": "pnpm --filter @intensivesquad/foundry compile",
+    "deploy": "pnpm --filter @intensivesquad/foundry deploy",
+    "deploy:verify": "pnpm --filter @intensivesquad/foundry deploy:verify",
+    "fork": "pnpm --filter @intensivesquad/foundry fork",
+    "foundry:lint": "pnpm --filter @intensivesquad/foundry lint",
+    "foundry:test": "pnpm --filter @intensivesquad/foundry test",
+    "verify": "pnpm --filter @intensivesquad/foundry verify",
+    "generate": "pnpm --filter @intensivesquad/foundry generate",
+    "__postinstall": "husky install",
+    "next:check-types": "pnpm --filter @intensivesquad/webapps check-types",
+    "next:format": "pnpm --filter @intensivesquad/webapps format",
+    "next:lint": "pnpm --filter @intensivesquad/webapps lint",
+    "__precommit": "lint-staged",
+    "__prepare": "install-self-peers -- --ignore-scripts",
+    "start": "pnpm --filter @intensivesquad/webapps dev",
+    "test": "pnpm foundry:test",
+    "vercel": "pnpm --filter @intensivesquad/webapps vercel",
+    "vercel:yolo": "pnpm --filter @intensivesquad/webapps vercel:yolo"
+  },
+  "packageManager": "pnpm@10.5.1",
+  "devDependencies": {
+    "@wagmi/cli": "^2.5.0",
+    "viem": "^2.34.0"
+  },
+  "dependencies": {
+    "blo": "^2.0.0"
+  }
+}
