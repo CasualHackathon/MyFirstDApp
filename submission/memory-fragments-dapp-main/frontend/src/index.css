@@ -1,0 +1,124 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '@rainbow-me/rainbowkit/styles.css';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-memory text-memory-800 antialiased;
+    background: linear-gradient(135deg, #fef7ee 0%, #fdedd3 100%);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-memory-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-memory-300 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-memory-400;
+  }
+}
+
+@layer components {
+  .memory-card {
+    @apply bg-white/70 backdrop-blur-sm border border-memory-200 rounded-xl p-6 hover:shadow-lg hover:bg-white/80 transition-all duration-300;
+  }
+  
+  .memory-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .emotion-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border;
+  }
+  
+  .upload-zone {
+    @apply border-2 border-dashed border-memory-300 rounded-xl p-8 text-center hover:border-memory-400 hover:bg-memory-50/50 transition-all duration-300 cursor-pointer;
+  }
+  
+  .upload-zone.dragover {
+    @apply border-memory-500 bg-memory-100/50;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-memory-500 to-memory-600 hover:from-memory-600 hover:to-memory-700 text-white px-6 py-3 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 hover:bg-white text-memory-600 hover:text-memory-700 px-6 py-3 rounded-lg font-medium border border-memory-200 hover:border-memory-300 transition-all duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/80 border border-memory-200 rounded-lg focus:ring-2 focus:ring-memory-400 focus:border-transparent transition-all duration-200;
+  }
+  
+  .textarea-field {
+    @apply w-full px-4 py-3 bg-white/80 border border-memory-200 rounded-lg focus:ring-2 focus:ring-memory-400 focus:border-transparent transition-all duration-200 resize-none;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full h-6 w-6 border-b-2 border-memory-500;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from { 
+      transform: translateY(20px); 
+      opacity: 0; 
+    }
+    to { 
+      transform: translateY(0); 
+      opacity: 1; 
+    }
+  }
+  
+  .animate-pulse-soft {
+    animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-memory-600 to-memory-800 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+  }
+}
