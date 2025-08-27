@@ -299,6 +299,7 @@
 **黑客松赛后 Feedback**
 
 - Demo show 后会发送一份关于本期休闲黑客松的 Feedback Tally，诚邀所有参与本期黑客松的相关者填写。您的反馈，能帮我们把休闲黑客松运营得越来越好！
+- 参赛反馈表：https://tally.so/r/3yQQl6
 
 **获奖 badge 查看**
 
